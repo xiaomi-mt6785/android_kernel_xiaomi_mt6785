@@ -155,4 +155,6 @@ obj-y += perf/
 obj-$(CONFIG_MTK_JPEG) += jpeg/
 obj-$(CONFIG_MTK_SPMTWAM) += twam/
 obj-$(CONFIG_MTK_LOW_POWER_MODULE) += lpm/
-
+ifneq ($(wildcard $(srctree)/drivers/misc/mediatek/udc/),)
+obj-y += udc/
+endif
